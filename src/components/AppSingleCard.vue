@@ -29,14 +29,23 @@ export default {
     <div>
         <img :src="img" alt="">
     </div>
-    <div>
-        <h3>{{ title }}</h3>
+    <div class="mt-3 textbox text-center">
+        <h5>{{ title }}</h5>
     </div>
-    <div>
+    <div class="mt-2 d-flex justify-content-center">
         <span>{{ archetype }}</span>
     </div>
 </div>
 </template>
 
-<style>
+<style scoped>
+
+img {
+    width: 100%;
+}
+
+.textbox {
+    width: 100%;
+    height: 5rem;
+}
 </style>
