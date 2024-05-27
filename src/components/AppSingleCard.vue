@@ -32,7 +32,7 @@ export default {
     <div class="mt-3 textbox text-center">
         <h5>{{ title }}</h5>
     </div>
-    <div class="mt-2 d-flex justify-content-center">
+    <div class="mt-2 d-flex justify-content-center description">
         <span>{{ archetype }}</span>
     </div>
 </div>
@@ -47,5 +47,16 @@ img {
 .textbox {
     width: 100%;
     height: 5rem;
+}
+
+.description {
+    width: 100%;
+    height: 8rem;
+    overflow: auto;
+    scrollbar-width: none;
+}
+
+.description::-webkit-scrollbar {
+  display: none;
 }
 </style>
