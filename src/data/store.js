@@ -2,7 +2,8 @@ import { reactive } from 'vue';
 
 const iMieiDati = reactive({
     carte: [],
-    archeotipi: []
+    archeotipi: [],
+    selectValue: []
 });
 
 export default iMieiDati;

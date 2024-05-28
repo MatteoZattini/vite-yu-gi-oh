@@ -10,11 +10,19 @@ export default {
   data() {
     return {
       store,
+      selectValue: ""
     }
   },
 
   methods: {
+    getValue(index) {
+      this.selectValue = index
+      console.log(this.selectValue)
+    },
 
+    getArchetype() {
+        console.log("cerca:", this.selectValue)
+    },
   },
 
   mounted() {
@@ -37,9 +45,8 @@ export default {
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-3 mb-5">
-        <select class="form-select" name="" id="">
-          <option selected>Seleziona l'archetype</option>
-          <option v-for="archeotipo in store.archeotipi" value="">{{ archeotipo.archetype_name }}</option>
+        <select v-model="store.selectValue" class="form-select" name="" id="">
+          <option v-for="archeotipo in store.archeotipi" >{{ archeotipo.archetype_name }}</option>
         </select>
       </div>
     </div>
